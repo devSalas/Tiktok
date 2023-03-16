@@ -4,7 +4,11 @@
    {{video.description}}
   </div>
   <div class="absolute bottom-0 right-0 w-14 h-48  grid grid-cols-1 place-items-center text-white text-3xl mb-8">
-    <mat-icon >favorite</mat-icon>
+
+    <mat-icon style="color:red;" *ngIf="video.like;else default" >favorite</mat-icon>
+    <ng-template #default >
+      <mat-icon >favorite</mat-icon>
+    </ng-template>
     <mat-icon>sms</mat-icon>
     <mat-icon>turned_in</mat-icon>
     <mat-icon>save</mat-icon>
